@@ -1,0 +1,11 @@
+.settings
+.classpath
+.project
+nb-configuration.xml
+/nbproject/project.properties
+/nbproject/project.xml
+/target/
+/org.eclipse.core.resources.prefs
+/org.eclipse.jdt.core.prefs
+/org.eclipse.m2e.core.prefs
+/org.eclipse.wst.common.project.facet.core.xml

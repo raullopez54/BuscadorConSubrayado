@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+  <head>
+    <meta charset="utf-8" />
+    <title>Titulo</title>
+    <link type="text/css" rel="stylesheet"  href="/api/css/normalizer.min.css"/>
+    <script type="text/javascript" src="/api/js/lib/ng-angular.min.js"></script>
+    <script type="text/javascript" src='/api/js/lib/ng-angular-route.min.js'></script>
+
+    <script type="text/javascript" src='/api/js/ng-const/ng-const.min.js'></script>
+
+    <script type="text/javascript" src="/api/js/ng-module/ng-module-app.min.js"></script>
+
+  </head>
+  <body apploading>
+    <!--    {{ firstName + " " + lastName}}
+        <span ng-model="firstName">{{ firstName + " " + lastName}}</span>-->
+
+    <h1>Éste es el título y no cambia</h1>
+
+
+    <ul>
+      <li><a href="#!/pagina1">Ir a la pagina 1</a>
+      </li>
+      <li><a href="#!/pagina2">Ir a la pagina 2</a>
+      </li>
+    </ul>
+
+
+    <div ng-view></div>
+
+
+
+    <script type="text/javascript" src="/ng-controller/ng-app-controller-template1.js"></script>
+    <script type="text/javascript" src="/ng-controller/ng-app-controller-template2.js"></script>
+
+
+
+
+    <script>
+
+//      (function ()
+//      {
+//        var cofg =
+//        {
+//          url: window.location.protocol + '//' + window.location.host,
+//          template: function ()
+//          {
+//            alert(this.url)
+//            return this.url + '/ng-template/';
+//          }
+//        };
+//        console.log(cofg.template)
+
+//      })();
+//      app.constant("miServicioConstante", "Hola mundo");
+//
+//      app.controller("controller", function ($scope, $http,
+//        miServicioConstante)
+//      {
+//        $scope.firstName = "John";
+//        $scope.lastName = "Doe";
+//
+//        $http.post('/test',
+//        {
+//          text: 'hello'
+//        })
+//          .then(function (response)
+//          {
+//            console.log(miServicioConstante)
+//            $scope.firstName = JSON.stringify(response.data[0].table);
+//          });
+//
+//      });
+
+
+
+    </script>
+  </body>
+</html>
