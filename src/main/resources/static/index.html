@@ -2,79 +2,39 @@
 <html lang="es" ng-app="app">
   <head>
     <meta charset="utf-8" />
-    <title>Titulo</title>
-    <link type="text/css" rel="stylesheet"  href="/api/css/normalizer.min.css"/>
-    <script type="text/javascript" src="/api/js/lib/ng-angular.min.js"></script>
-    <script type="text/javascript" src='/api/js/lib/ng-angular-route.min.js'></script>
+    <title>Spring Boot and Angular JS</title>
 
-    <script type="text/javascript" src='/api/js/ng-const/ng-const.min.js'></script>
+    <link type="text/css" rel="stylesheet"  href="/api/css/normalizer.css"/>
+    <link type="text/css" rel="stylesheet"  href="/ng-css/ini.css"/>
+    <link type="text/css" rel="stylesheet"  href="/ng-css/about.css"/>
+    <link type="text/css" rel="stylesheet"  href="/ng-css/testBbdd.css"/>
 
-    <script type="text/javascript" src="/api/js/ng-module/ng-module-app.min.js"></script>
-
+    <script type="text/javascript" src="/api/js/lib/ngAngular.min.js"></script>
+    <script type="text/javascript" src='/api/js/lib/ngAngularRoute.min.js'></script>
+    <script type="text/javascript" src='/api/js/ng-const/ngConst.js'></script>
+    <script type="text/javascript" src="/api/js/ng-module/ngModuleApp.js"></script>
   </head>
-  <body apploading>
-    <!--    {{ firstName + " " + lastName}}
-        <span ng-model="firstName">{{ firstName + " " + lastName}}</span>-->
+  <body apploading  ng-controller="ngAppControllerIndex">
+    <header id="header">
+      <nav>
+        <ul>
+          <li>
+            <a href="#!/">Inicio</a>
+          </li>
+          <li>
+            <a href="#!/test-bbdd">Test BBDD</a>
+          </li> 
+        </ul>
+      </nav>
+    </header>
+    <div id="wrapper"> 
+      <div ng-view></div>
+    </div>
+    <footer id="footer">
+      <a href="#!/about"></a>
+    </footer>
 
-    <h1>Éste es el título y no cambia</h1>
-
-
-    <ul>
-      <li><a href="#!/pagina1">Ir a la pagina 1</a>
-      </li>
-      <li><a href="#!/pagina2">Ir a la pagina 2</a>
-      </li>
-    </ul>
-
-
-    <div ng-view></div>
-
-
-
-    <script type="text/javascript" src="/ng-controller/ng-app-controller-template1.js"></script>
-    <script type="text/javascript" src="/ng-controller/ng-app-controller-template2.js"></script>
-
-
-
-
-    <script>
-
-//      (function ()
-//      {
-//        var cofg =
-//        {
-//          url: window.location.protocol + '//' + window.location.host,
-//          template: function ()
-//          {
-//            alert(this.url)
-//            return this.url + '/ng-template/';
-//          }
-//        };
-//        console.log(cofg.template)
-
-//      })();
-//      app.constant("miServicioConstante", "Hola mundo");
-//
-//      app.controller("controller", function ($scope, $http,
-//        miServicioConstante)
-//      {
-//        $scope.firstName = "John";
-//        $scope.lastName = "Doe";
-//
-//        $http.post('/test',
-//        {
-//          text: 'hello'
-//        })
-//          .then(function (response)
-//          {
-//            console.log(miServicioConstante)
-//            $scope.firstName = JSON.stringify(response.data[0].table);
-//          });
-//
-//      });
-
-
-
-    </script>
+    <script type="text/javascript" src="/ng-controller/ngAppControllerIndex.js"></script>
+    <script type="text/javascript" src="/ng-controller/ngAppControllerTestBbdd.js"></script>
   </body>
 </html>

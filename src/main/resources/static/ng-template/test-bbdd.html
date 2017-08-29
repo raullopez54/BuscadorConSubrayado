@@ -1,0 +1,10 @@
+<div id="testBBDD">
+  <input type="button" value="INICIAR TEST"  ng-show="!testOk" ng-click="test()"/>
+  
+  <h1 ng-show="testOk">INFORMACI&Oacute;N DE LA BASE DE DATOS</h1>
+  <div ng-show="testOk">
+    <ul>
+      <li ng-repeat="x in bbdd track by $index">Tabla {{$index}} | {{x.table}}</li>
+    </ul>
+  </div>
+</div>

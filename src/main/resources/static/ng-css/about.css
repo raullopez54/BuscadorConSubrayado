@@ -1,0 +1,44 @@
+#about
+{
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#about > div ul
+{
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 25px;
+  border-left: 1px solid rgba(50, 50, 50, 0.5);
+}
+
+#about > div ul::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  margin-right: 30px;
+  opacity: 0.75;
+  background-image: url('../ng-img/info.png');
+  background-position: right center;
+  background-repeat:  no-repeat;
+  background-size: contain;
+}
+
+#about > div ul li
+{
+  padding: 5px;
+}

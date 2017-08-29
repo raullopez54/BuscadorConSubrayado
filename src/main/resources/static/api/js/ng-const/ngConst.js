@@ -10,4 +10,4 @@ const GBL_COFG =
   {
     return this.url + '/ng-template/' + template;
   }
-};
+}; 

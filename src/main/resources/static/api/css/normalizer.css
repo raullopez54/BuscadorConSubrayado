@@ -1,3 +1,9 @@
+/******************************************************************************
+ *
+ * RESET
+ *
+ ******************************************************************************/
+
 *, *::before, *::after
 {
   margin:0;
@@ -21,7 +27,28 @@ html, body
   background-color: rgba(250, 250, 250, 1);
 }
 
+:focus
+{
+  outline: 0;
+}
 
+a:link, a:active, a:visited, a:hover
+{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ol, ul, li
+{
+  list-style: none;
+  list-style-position: inside;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 body::before
 {
@@ -35,8 +62,6 @@ body::before
 }
 
 
-
-
 body.appLoading::before
 {
   width: 100%;
@@ -45,4 +70,130 @@ body.appLoading::before
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 80px;
+}
+
+
+/******************************************************************************
+ *
+ * STRUCTURE
+ *
+ ******************************************************************************/
+
+#header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  padding-right: 20px;
+  transition: all 250ms ease-in-out;
+  transform: translateX(-230px);
+  box-shadow: 0 0 5px rgba(20, 20, 20, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+#header:hover
+{
+  padding-right: 0;
+  transform: translateX(0);
+}
+
+#header ul
+{
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#header ul li
+{
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 15px 35px 15px 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.15);
+}
+
+#header ul li:last-child
+{
+  border-bottom: 1px solid rgba(50, 50, 50, 0);
+}
+
+#wrapper, #wrapper > div
+{
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#wrapper
+{
+  padding-left: 20px; 
+}
+
+#footer
+{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+  border-radius: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#footer *
+{
+  color: rgba(255, 255, 255, 1);
+}
+
+#footer > a
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#footer > a::before
+{
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(50, 50, 50, 0.75);
+  border-radius: 100%;
+}
+
+#footer > a::after
+{
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -2px;
+  width: 4px;
+  height: 40%;
+  background-color: rgba(50, 50, 50, 0.75);
+  border-radius: 1px;
 }

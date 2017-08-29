@@ -1,0 +1,21 @@
+#ini
+{
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgba(15, 15, 15, 1);
+  background-image: url('../ng-img/spring.png'), url('../ng-img/angularjs.png');
+  background-position: right top, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto 200px, 600px auto;
+}
+
+
+@media all and (max-width: 768px)
+{
+  #ini
+  {
+    background-size: auto 200px, 400px auto;
+  }
+}

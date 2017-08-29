@@ -1,30 +1,31 @@
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute']);
 
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider,
-  $locationProvider)
+
+app.config(['$routeProvider', '$locationProvider',
+  function ($routeProvider, $locationProvider)
   {
-//    $locationProvider.html5Mode(true);
-
-
     $routeProvider.otherwise(
     {
       redirectTo: '/'
     })
-
-    .when('/pagina1',
+    .when('/',
     {
-      templateUrl: GBL_COFG.urlTemplate('pagina1.html'),
-      controller: 'ng-app-controller-template1'
+      templateUrl: GBL_COFG.urlTemplate('ini.html')
     })
-
-    .when('/pagina2',
+    .when('/about',
     {
-      templateUrl: GBL_COFG.urlTemplate('pagina2.html'),
-      controller: 'ng-app-controller-template2'
+      templateUrl: GBL_COFG.urlTemplate('about.html')
+    })
+    .when('/test-bbdd',
+    {
+      templateUrl: GBL_COFG.urlTemplate('test-bbdd.html'),
+      controller: 'ngAppControllerTestBbdd'
     });
   }]);
 
-app.directive('apploading', ['$http', function ($http)
+
+app.directive('apploading',
+['$http', function ($http)
   {
     var loading =
     {
@@ -38,7 +39,6 @@ app.directive('apploading', ['$http', function ($http)
 
         scope.$watch(scope.isLoading, function (v)
         {
-          console.log(JSON.stringify(elm) + ' ' + JSON.stringify(attrs))
           if (v)
           {
             elm[0].classList.add('appLoading');
