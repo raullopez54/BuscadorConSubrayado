@@ -62,8 +62,9 @@
 
 #search #items
 {
-  margin: 0 auto;
-  width: auto;
+  float: left;
+  clear: both;
+  width: 100%;
   padding: 20px;
 }
 
