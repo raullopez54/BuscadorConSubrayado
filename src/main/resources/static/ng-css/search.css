@@ -1,0 +1,129 @@
+#search
+{
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#search #searchWrapper
+{
+  position: relative;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: inset 1px 1px 4px rgba(50, 50, 50, 0.15);
+  margin: 50px 0 25px 0;
+}
+
+#search #searchWrapper > input[type="text"]
+{
+  width: 250px;
+  float: left;
+  padding-right: 45px;
+}
+
+#search #searchWrapper::before
+{
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 25px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: inset 0 0 0 2px rgba(50, 50, 50, 0.25);
+}
+
+#search #searchWrapper::after
+{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  right: 34px;
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: rgba(50, 50, 50, 0.25);
+  transform-origin: top right;
+  transform: rotate(-35deg);
+}
+
+#search #items
+{
+  margin: 0 auto;
+  width: auto;
+  padding: 20px;
+}
+
+#search #items article
+{
+  width: 25%;
+  float: left;
+  padding: 20px;
+}
+
+#search #items article > *
+{
+  float: left;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow:  1px 1px 2px rgba(50, 50, 50, 0.25);
+}
+
+#search #items article > * > figure
+{
+  float: left;
+  width: 100%;
+  height: 25vh;
+  min-height: 15vw;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.15);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#search #items article > * > div
+{
+  float: left;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+#search #items article > * > div h1,
+#search #items article > * > div p
+{
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#search #items article > * > div h1
+{
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+}
+
+#search #items article > * > div p
+{
+  text-align: justify;
+  line-height: 1.4rem;
+  overflow: hidden;
+  max-height: 50px;
+}

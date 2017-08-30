@@ -20,6 +20,11 @@ app.config(['$routeProvider', '$locationProvider',
     {
       templateUrl: GBL_COFG.urlTemplate('test-bbdd.html'),
       controller: 'ngAppControllerTestBbdd'
+    })
+    .when('/search',
+    {
+      templateUrl: GBL_COFG.urlTemplate('search.html'),
+      controller: 'ngAppControllerSearch'
     });
   }]);
 
