@@ -3,7 +3,6 @@ package com.lab.persistence.mapper;
 import com.lab.persistence.mapper.bbdd.BBDD;
 import com.lab.persistence.model.ItemsModel;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,6 @@ public class ItemsMapperImpl implements ItemsMapper
   @Override
   public List<ItemsModel> getItemsMapper(ItemsModel obj) throws Exception
   {
-    System.out.
-            println("com.lab.persistence.mapper.ItemsMapperImpl.getItemsMapper()");
     return this.addItemsModel("SELECT * FROM items");
   }
 
