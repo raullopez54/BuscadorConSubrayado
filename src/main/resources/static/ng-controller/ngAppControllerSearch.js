@@ -1,6 +1,13 @@
 app.controller('ngAppControllerSearch',
 ['$scope', '$http', '$timeout', function ($scope, $http, $timeout)
   {
+
+    /**************************************************************************
+     * 
+     * CONFIG
+     * 
+     **************************************************************************/
+
     var timer =
     {
       search:
@@ -10,6 +17,29 @@ app.controller('ngAppControllerSearch',
       }
     };
 
+    /**************************************************************************
+     * 
+     * INI
+     * 
+     **************************************************************************/
+
+    (function ()
+    {
+      $http.post('/getItems', {})
+      .then(function (response)
+      {
+        scopeItems(response.data);
+      })
+    })();
+
+
+
+    /**************************************************************************
+     * 
+     * FUNCTIONS MODEL
+     * 
+     **************************************************************************/
+
     $scope.searchFn = function (e)
     {
       var value = e.target.value;
@@ -17,18 +47,29 @@ app.controller('ngAppControllerSearch',
       $timeout.cancel(timer.search.id);
       timer.search.id = $timeout(function ()
       {
-        $http.post('/getItems',
+        $http.post('/searchItems',
         {
           nombre: value
         })
         .then(function (response)
         {
-          var data = response.data;
-
-          $scope.items = data;
+          scopeItems(response.data);
         });
 
       }, timer.search.ms);
     };
+
+
+
+
+    /**************************************************************************
+     * 
+     * PRIVATE FUNCTIONS
+     * 
+     **************************************************************************/
+    function scopeItems(data)
+    {
+      $scope.items = data;
+    }
 
   }]);

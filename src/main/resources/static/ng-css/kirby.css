@@ -1,0 +1,367 @@
+#wrapperKirby
+{
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#kirby
+{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+
+#kirby, #kirby *
+{
+  z-index: 0;
+  transition: all 250ms ease-in-out
+}
+
+#body
+{
+  position: absolute;
+  top: 16px;
+  left: 30px;
+  width: 186px;
+  height: 186px;
+  border-radius: 100%;
+  transition: all 750ms ease-in-out
+}
+
+#body:hover
+{
+  animation: fxBody 1750ms infinite ease-in-out;
+}
+
+@keyframes fxBody
+{
+  0%, 100%
+  {
+    top: 16px;
+  }
+  50%
+  {
+    top: 0%;
+  } 
+}
+
+#face
+{
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  background: linear-gradient(160deg,  rgba(255,235,235,1) 0%,rgba(255,90,180,1) 100%);
+  box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25);
+}
+
+#eyes
+{
+  position: absolute;
+  z-index: 1;
+  top: 14%;
+  left: 30%;
+  width: 40%;
+  height: 35%;
+  overflow: hidden;
+}
+
+#eyeLeft, #eyeRight
+{
+  position: absolute;
+  top: 0%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  background: cornflowerblue;
+  border-radius: 100%;
+  background: linear-gradient(160deg,  rgba(255,255,255,1) 0%,rgba(130,190,235,1) 100%);
+  box-shadow:  inset 0 0 1px 2px rgba(50,50,50,1);
+}
+
+#eyeLeft
+{
+  left: 0;
+}
+
+#eyeRight
+{
+  right: 0;
+}
+
+.pupil, .iris
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: rgba(50,50,50,1);
+  border-radius: 100%;
+  border: 1px solid rgba(20,20,20,1);
+}
+
+.iris
+{
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: white;
+}
+
+#eyes:hover
+{
+  top: 30%;
+  height: 20%;
+}
+
+#eyes:hover > *
+{
+  box-shadow:  inset 0 0 1px 20px rgba(255, 0, 55, 0.75);
+}
+
+#eyes:hover .pupil, #eyes:hover .iris
+{
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width:  80%;
+}
+
+#eyes:hover .iris
+{
+  top: 30%;
+  left: 30%;
+  width:  40%;
+  height: 40%;
+}
+
+#cheek
+{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  overflow: hidden;
+}
+
+#cheek:before, #cheek:after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  border-radius: 100%;
+  background: linear-gradient(160deg,  rgba(255,90,180,0.25) 0%,rgba(255,90,180,1) 100%);
+}
+
+#cheek:before
+{
+  left: 0;
+}
+
+#cheek:after
+{
+  right: 0;
+}
+
+#mouth
+{
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 45%;
+  width: 10%;
+  height: 6%;
+  overflow: hidden;
+  border-radius: 100%;
+  background: linear-gradient(160deg,  rgba(196,0,91,1) 0%,rgba(102,0,9,1) 100%);
+  box-shadow:  0 0 1px 1px rgba(55, 0, 55, 0.5), inset 0 0 15px rgba(155, 0, 155, 0.75);
+  transition: all 500ms ease-in-out
+}
+
+#eyes:hover ~ #mouth
+{
+  top: 65%;
+  left: 25%;
+  width: 50%;
+  height: 1%;
+  box-shadow:  0 0 2px 1px rgba(55, 0, 55, 0.75), inset 0 0 15px rgba(155, 0, 155, 0.75);
+}
+
+#mouth:hover
+{
+  top: 55%;
+  left: 20%;
+  width: 60%;
+  height: 35%;
+  box-shadow:  0 0 2px 1px rgba(55, 0, 55, 0.75), inset 0 0 15px rgba(155, 0, 155, 0.75);
+}
+
+#tongue
+{
+  position: absolute;
+  top: 51%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: 100%;
+  background: linear-gradient(160deg,  rgba(196,0,32,1) 0%,rgba(252,0,159,1) 100%);
+}
+
+#wings
+{
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#wingLeft
+{
+  position: absolute;
+  top: 50%;
+  right: 90%;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 100% 50% 100% 50%;
+  background: linear-gradient(160deg,  rgba(255,235,235,1) 0%,rgba(255,90,180,1) 100%);
+  box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25);
+}
+
+#wingRight
+{
+  position: absolute;
+  top: 50%;
+  left:  90%;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50% 100% 40% 100%;
+  background: linear-gradient(160deg,  rgba(255,235,235,1) 0%,rgba(255,90,180,1) 100%);
+  box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25);
+}
+
+#kirby:hover #wingLeft
+{
+  animation: fxWingLeft 500ms infinite ease-in-out;
+}
+
+@keyframes fxWingLeft
+{
+  0%, 100%
+  {
+    top: 50%;
+    border-radius: 100% 50% 100% 50%; 
+  }
+  50%
+  {
+    top: 15%;
+    border-radius: 50% 100% 40% 100%;
+  } 
+}
+
+#kirby:hover #wingRight
+{
+  animation: fxWingRight 500ms infinite ease-in-out;
+}
+
+@keyframes fxWingRight
+{
+  0%, 100%
+  {
+    top: 50%;
+    border-radius: 50% 100% 40% 100%;
+  }
+  50%
+  {
+    top: 15%;
+    border-radius: 100% 50% 100% 50%;
+  } 
+}
+
+#foo
+{
+  position: absolute;
+  bottom:0;
+  left: 25%;
+  width: 50%;
+  height: 25%;
+}
+
+#fooLeft
+{
+  position: absolute;
+  z-index: 1;
+  top: -40%;
+  right: 51%;
+  width: 100%;
+  height: 150%;
+}
+
+#fooRight
+{
+  position: absolute;
+  z-index: 1;
+  top: -40%;
+  left:  51%;
+  width: 100%;
+  height: 150%;
+}
+
+#fooLeft > div,  #fooRight > div
+{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  float: left;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(90deg,  rgba(250,170,170,1) 0%,rgba(255,10,32,1) 60%);
+  box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25),  5px 3px 5px rgba(0, 0, 0, 0.25);
+  transition: all 1750ms ease-in-out;
+}
+
+#body:hover #fooLeft > div, #body:hover #fooRight > div
+{
+  animation: fxFooterLeft 1750ms infinite ease-in-out;
+}
+
+@keyframes fxFooterLeft
+{
+  0%, 100%
+  {
+    box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25),  15px 25px 15px rgba(0, 0, 0, 0.15);
+  }
+  50%
+  {
+    box-shadow:  inset 0 0 15px rgba(155, 0, 155, 0.25),  15px 60px 35px rgba(0, 0, 0, 0.075);
+  } 
+}
+
+#fooLeft > div
+{
+  border-radius: 100% 50% 100% 50%;
+}
+
+#fooRight > div
+{
+  border-radius: 50% 100% 40% 100%;
+}

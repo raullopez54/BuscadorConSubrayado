@@ -1,7 +1,32 @@
 app.controller('ngAppControllerTestBbdd',
 ['$scope', '$http', '$timeout', function ($scope, $http, $timeout)
   {
+
+    /**************************************************************************
+     * 
+     * CONFIG
+     * 
+     **************************************************************************/
+
+
+
+
+    /**************************************************************************
+     * 
+     * INI
+     * 
+     **************************************************************************/
+
     $scope.testOk = false;
+
+
+
+
+    /**************************************************************************
+     * 
+     * FUNCTIONS MODEL
+     * 
+     **************************************************************************/
 
     $scope.test = function ()
     {
@@ -11,17 +36,25 @@ app.controller('ngAppControllerTestBbdd',
       })
       .then(function (response)
       {
-        var data = response.data;
-
-        $scope.testOk = true;
-        $scope.bbdd = data;
-
-        $timeout(function ()
-        {
-          $scope.testOk = false;
-        }, 5000);
+        scopeTest(response.data);
       });
     };
 
+
+    /**************************************************************************
+     * 
+     * PRIVATE FUNCTIONS
+     * 
+     **************************************************************************/
+    function scopeTest(data)
+    {
+      $scope.testOk = true;
+      $scope.bbdd = data;
+
+      $timeout(function ()
+      {
+        $scope.testOk = false;
+      }, 5000);
+    }
 
   }]);

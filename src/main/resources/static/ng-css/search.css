@@ -75,6 +75,14 @@
   padding: 20px;
 }
 
+@media all and (max-width: 1279px)
+{
+  #search #items article
+  {
+    width: 33.33%;
+  }
+}
+
 #search #items article > *
 {
   float: left;
@@ -119,6 +127,9 @@
 {
   text-transform: uppercase;
   border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #search #items article > * > div p

@@ -25,9 +25,21 @@ public class ItemsController
   @RequestMapping(value = "/getItems",
                   method = RequestMethod.POST,
                   produces = MediaType.APPLICATION_JSON_VALUE)
-  public List<ItemsModel> test(@RequestBody ItemsModel obj) throws Exception
+  public List<ItemsModel> getItems(@RequestBody ItemsModel obj) throws Exception
   {
-    List<ItemsModel> x = iService.testService(obj);
+    List<ItemsModel> x = iService.getItemsService(obj);
+
+    return x;
+  }
+
+
+  @ResponseBody
+  @RequestMapping(value = "/searchItems",
+                  method = RequestMethod.POST,
+                  produces = MediaType.APPLICATION_JSON_VALUE)
+  public List<ItemsModel> searchItems(@RequestBody ItemsModel obj) throws Exception
+  {
+    List<ItemsModel> x = iService.searchItemsService(obj);
 
     return x;
   }

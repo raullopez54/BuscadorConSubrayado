@@ -16,11 +16,21 @@ public class ItemsServiceImpl implements ItemsService
 
 
   @Override
-  public List<ItemsModel> testService(ItemsModel obj) throws Exception
+  public List<ItemsModel> getItemsService(ItemsModel obj) throws Exception
   {
-    List<ItemsModel> x = iMapper.testMapper(obj);
+    List<ItemsModel> x = iMapper.getItemsMapper(obj);
 
     return x;
   }
+
+
+  @Override
+  public List<ItemsModel> searchItemsService(ItemsModel obj) throws Exception
+  {
+    List<ItemsModel> x = iMapper.searchItemsMapper(obj);
+
+    return x;
+  }
+
 
 }
