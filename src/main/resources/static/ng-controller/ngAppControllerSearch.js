@@ -1,5 +1,5 @@
 app.controller('ngAppControllerSearch',
-['$scope', '$http', '$timeout', function ($scope, $http, $timeout)
+['$scope', '$http', '$timeout', 'utilService', function ($scope, $http, $timeout, utilService)
   {
 
     /**************************************************************************
@@ -7,6 +7,8 @@ app.controller('ngAppControllerSearch',
      * CONFIG
      * 
      **************************************************************************/
+
+console.log(utilService.getMessage())
 
     var timer =
     {

@@ -1,5 +1,5 @@
 app.controller('ngAppControllerTestBbdd',
-['$scope', '$http', '$timeout', function ($scope, $http, $timeout)
+['$scope', '$http', '$timeout', 'utilService', function ($scope, $http, $timeout, utilService)
   {
 
     /**************************************************************************
@@ -8,7 +8,7 @@ app.controller('ngAppControllerTestBbdd',
      * 
      **************************************************************************/
 
-
+utilService.setMessage('VERO MIS PASTELES')
 
 
     /**************************************************************************
