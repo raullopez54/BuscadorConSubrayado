@@ -144,6 +144,7 @@ body.appLoading::before
 #footer
 {
   position: fixed;
+  z-index: 9999;
   top: 15px;
   right: 15px;
   width: 30px;

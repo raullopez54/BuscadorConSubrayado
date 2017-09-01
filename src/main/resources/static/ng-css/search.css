@@ -24,6 +24,7 @@
   margin: 25px 0 25px 0;
 }
 
+
 #search #searchWrapper > input[type="text"]
 {
   width: 250px;
@@ -105,6 +106,16 @@
   align-items: stretch;
 }
 
+
+@media all and (max-width: 767px)
+{
+  #search #items
+  {
+    padding: 5px;
+  }
+}
+
+
 #search #items article
 {
   width: 25%;
@@ -136,6 +147,7 @@
   #search #items article
   {
     width: 100%;
+    padding: 12px 20px;
   }
 }
 
