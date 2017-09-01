@@ -22,7 +22,7 @@ app.controller('ngAppControllerSearch',
       el: document.querySelector('#msg > span'),
       style: 
       {
-         classnotFound: 'notFound' 
+         classNotFound: 'notFound' 
       }
     };
 
@@ -80,7 +80,7 @@ app.controller('ngAppControllerSearch',
     {
       var length = data.length;
       
-      msg.el.classList.remove(msg.style.classnotFound);
+      msg.el.classList.remove(msg.style.classNotFound);
       
       if(length > 0)
       {
@@ -88,7 +88,7 @@ app.controller('ngAppControllerSearch',
       }
       else
       {
-        msg.el.classList.add(msg.style.classnotFound);
+        msg.el.classList.add(msg.style.classNotFound);
       }
       
       $scope.msg = data.length;
