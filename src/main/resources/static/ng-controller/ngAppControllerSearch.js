@@ -16,6 +16,15 @@ app.controller('ngAppControllerSearch',
         ms: 750
       }
     };
+    
+    var msg = 
+    {
+      el: document.querySelector('#msg > span'),
+      style: 
+      {
+         classnotFound: 'notFound' 
+      }
+    };
 
     /**************************************************************************
      * 
@@ -69,7 +78,20 @@ app.controller('ngAppControllerSearch',
      **************************************************************************/
     function scopeItems(data)
     {
-      $scope.items = data;
+      var length = data.length;
+      
+      msg.el.classList.remove(msg.style.classnotFound);
+      
+      if(length > 0)
+      {
+        $scope.items = data;
+      }
+      else
+      {
+        msg.el.classList.add(msg.style.classnotFound);
+      }
+      
+      $scope.msg = data.length;
     }
 
   }]);
