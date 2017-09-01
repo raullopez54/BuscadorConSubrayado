@@ -2,14 +2,24 @@ app.factory('utilService', function ()
 {
   var service =
   {
-    message: 0,
-    getMessage: function ()
+    contTestBBDD: 0,
+    getContTestBBDD: function ()
     {
-      return this.message;
+      return this.contTestBBDD;
     },
-    setMessage: function (msg)
+    setContTestBBDD: function (contTestBBDD)
     {
-      this.message = msg;
+      this.contTestBBDD = contTestBBDD;
+    },
+
+    contSearchItems: 0,
+    getContSearchItems: function ()
+    {
+      return this.contSearchItems;
+    },
+    setContSearchItems: function (contSearchItems)
+    {
+      this.contSearchItems = contSearchItems;
     }
   };
 
