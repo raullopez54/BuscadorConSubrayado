@@ -28,12 +28,12 @@
 #body
 {
   position: absolute;
-  top: 16px;
+  top: 0;
   left: 30px;
   width: 186px;
   height: 186px;
   border-radius: 100%;
-  transition: all 750ms ease-in-out
+  transition: all 750ms ease-in-out;
 }
 
 #body:hover
@@ -41,17 +41,19 @@
   animation: fxBody 1750ms infinite ease-in-out;
 }
 
+
 @keyframes fxBody
 {
   0%, 100%
   {
-    top: 16px;
+    top: 0;
   }
   50%
   {
-    top: 0%;
+    top: -26px;
   } 
 }
+
 
 #face
 {
