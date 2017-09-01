@@ -2,7 +2,7 @@ app.factory('utilService', function ()
 {
   var service =
   {
-    message: 'MSG...',
+    message: 0,
     getMessage: function ()
     {
       return this.message;

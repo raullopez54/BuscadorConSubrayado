@@ -8,7 +8,7 @@ app.controller('ngAppControllerSearch',
      * 
      **************************************************************************/
 
-console.log(utilService.getMessage())
+
 
     var timer =
     {
@@ -18,13 +18,13 @@ console.log(utilService.getMessage())
         ms: 750
       }
     };
-    
-    var msg = 
+
+    var msg =
     {
       el: document.querySelector('#msg > span'),
-      style: 
+      style:
       {
-         classNotFound: 'notFound' 
+        classNotFound: 'notFound'
       }
     };
 
@@ -58,6 +58,11 @@ console.log(utilService.getMessage())
       $timeout.cancel(timer.search.id);
       timer.search.id = $timeout(function ()
       {
+        
+        var x = utilService.getMessage();
+        console.log(utilService.getMessage());
+        utilService.setMessage(++x);
+
         $http.post('/searchItems',
         {
           nombre: value
@@ -81,10 +86,10 @@ console.log(utilService.getMessage())
     function scopeItems(data)
     {
       var length = data.length;
-      
+
       msg.el.classList.remove(msg.style.classNotFound);
-      
-      if(length > 0)
+
+      if (length > 0)
       {
         $scope.items = data;
       }
@@ -92,7 +97,7 @@ console.log(utilService.getMessage())
       {
         msg.el.classList.add(msg.style.classNotFound);
       }
-      
+
       $scope.msg = data.length;
     }
 
