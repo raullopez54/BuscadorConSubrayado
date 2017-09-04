@@ -1,6 +1,6 @@
 app.controller('ngAppControllerTestBbdd',
-['$scope', '$http', '$timeout', 'utilService',
-  function ($scope, $http, $timeout, utilService)
+['$scope', '$http', '$timeout', 'utilFactory',
+  function ($scope, $http, $timeout, utilFactory)
   {
 
     /**************************************************************************
@@ -31,7 +31,7 @@ app.controller('ngAppControllerTestBbdd',
 
     $scope.test = function ()
     {
-      utilService.setContTestBBDD(utilService.getContTestBBDD() + 1);
+      utilFactory.setContTestBBDD(utilFactory.getContTestBBDD() + 1);
 
       $http.post('/test',
       {

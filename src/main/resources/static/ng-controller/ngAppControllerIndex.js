@@ -1,6 +1,6 @@
 app.controller('ngAppControllerIndex',
-['$scope', '$http', '$timeout', 'utilService',
-  function ($scope, $http, $timeout, utilService)
+['$scope', '$http', '$timeout', 'utilFactory',
+  function ($scope, $http, $timeout, utilFactory)
   {
     /**************************************************************************
      * 

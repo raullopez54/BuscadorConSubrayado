@@ -1,6 +1,6 @@
 app.controller('ngAppControllerSearch',
-['$scope', '$http', '$timeout', 'utilService',
-  function ($scope, $http, $timeout, utilService)
+['$scope', '$http', '$timeout', 'utilFactory',
+  function ($scope, $http, $timeout, utilFactory)
   {
 
     /**************************************************************************
@@ -57,7 +57,7 @@ app.controller('ngAppControllerSearch',
       $timeout.cancel(timer.search.id);
       timer.search.id = $timeout(function ()
       {
-        utilService.setContSearchItems(utilService.getContSearchItems() + 1);
+        utilFactory.setContSearchItems(utilFactory.getContSearchItems() + 1);
         
         $http.post('/searchItems',
         {

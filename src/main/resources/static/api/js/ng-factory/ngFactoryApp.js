@@ -1,4 +1,4 @@
-app.factory('utilService', function ()
+app.factory('utilFactory', function ()
 {
   var service =
   {

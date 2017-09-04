@@ -1,6 +1,6 @@
 app.controller('ngAppControllerAbout',
-['$scope', '$http', '$timeout', 'utilService',
-  function ($scope, $http, $timeout, utilService)
+['$scope', '$http', '$timeout', 'utilFactory',
+  function ($scope, $http, $timeout, utilFactory)
   {
     /**************************************************************************
      * 
@@ -16,8 +16,8 @@ app.controller('ngAppControllerAbout',
      * 
      **************************************************************************/
 
-    $scope.countTest = utilService.getContTestBBDD();
-    $scope.countItems = utilService.getContSearchItems();
+    $scope.countTest = utilFactory.getContTestBBDD();
+    $scope.countItems = utilFactory.getContSearchItems();
 
     /**************************************************************************
      * 
