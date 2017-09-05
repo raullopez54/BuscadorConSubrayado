@@ -15,7 +15,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.4.RELEASE</version>
+    <version>1.5.6.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
@@ -24,6 +24,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
   </properties>
+ 
+
 
   <dependencies>
     <dependency>
@@ -41,13 +43,6 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    
-<!--    <dependency> -->
-<!--       <groupId>org.springframework.data</groupId> -->
-<!--       <artifactId>spring-data-commons</artifactId> -->
-<!--       <version>2.0.0.BUILD-SNAPSHOT</version> -->
-<!--       <type>jar</type> -->
-<!--     </dependency> -->
 
     <!--    NUEVAS DEPENDENCIAS    -->
 
@@ -80,8 +75,17 @@
       <scope>runtime</scope>
     </dependency>
 
-    <!--   FIN  NUEVAS DEPENDENCIAS    -->
-
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.4.5</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>
