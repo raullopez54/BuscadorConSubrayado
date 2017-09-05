@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @Controller
-public class Test
+public class TestController
 {
 
   @Autowired
