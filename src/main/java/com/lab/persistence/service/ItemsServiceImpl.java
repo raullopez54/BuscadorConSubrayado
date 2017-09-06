@@ -44,14 +44,26 @@ public class ItemsServiceImpl implements ItemsService
     return x;
   }
 
-  private Pattern pattern(String x)
+  /**
+   * METODO PARA GENERAR UN PATRON.
+   *
+   * @param str Cadena a insertar en el patron de busqueda.
+   * @return Patron generado.
+   */
+  private Pattern pattern(String str)
   {
-    return Pattern.compile("(?i)" + x);
+    return Pattern.compile("(?i)" + str);
   }
 
-  private String patternReplace(String x)
+  /**
+   * METODO PARA REALIZAR UN REMPLAZO DE UNA CADENA POR UN TAG HTML.
+   *
+   * @param str Cadena a insertar en el tag.
+   * @return tag generado en html.
+   */
+  private String patternReplace(String str)
   {
-    return "<strong class=\"found\">" + x + "</strong>";
+    return "<strong class=\"found\">" + str + "</strong>";
   }
 
 }
