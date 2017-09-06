@@ -61,7 +61,8 @@ app.controller('ngAppControllerSearch',
         
         $http.post('/searchItems',
         {
-          nombre: value
+          nombre: value,
+          descripcion: value
         })
         .then(function (response)
         {

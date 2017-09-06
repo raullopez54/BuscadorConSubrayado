@@ -228,7 +228,7 @@
   text-overflow: ellipsis;
 }
 
-#search #items article > * > div p
+#search #items article > * > div p, #search #items article > * > div p *
 {
   text-align: justify;
   line-height: 1.4rem;
@@ -238,4 +238,10 @@
 #search #items article > * > div p:first-letter
 {
   text-transform: uppercase;
+}
+
+
+#search #items article strong.found
+{
+  box-shadow: inset 0 0 20px rgba(50, 50, 50, 0.2);
 }

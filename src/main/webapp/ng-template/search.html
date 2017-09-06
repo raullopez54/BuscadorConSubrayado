@@ -13,10 +13,8 @@
           <figure style="background-image: url('{{item.url}}')">
           </figure>
           <div>
-            <h1>{{item.nombre}}</h1>
-            <p>
-              {{item.descripcion}}
-            </p>
+            <h1 ng-bind-html="item.nombre"></h1>
+            <p ng-bind-html="item.descripcion"></p>
           </div>
         </section>
       </article>
